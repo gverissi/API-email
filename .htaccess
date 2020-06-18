@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^api/([A-Za-z]+)/?$ index.php?route=$1

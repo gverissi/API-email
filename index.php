@@ -30,7 +30,7 @@ $path = $_SERVER['PATH_INFO'];
 // var_dump($path);
 
 echo $req_method;
-echo $path;
+echo $_GET["route"];
 
 // if ($path === "/api/email/add" && $req_method === "POST") {
 // 	$data = json_decode(file_get_contents("php://input"), true);
