@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class Database extends Manager {
+class Database extends DatabaseManager {
 	
     public function insert($email) {
         $db = $this->dbConnect();

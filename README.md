@@ -2,6 +2,7 @@
 
 ## Start le serveur API
 `php -S localhost:1664`
+`composer require phpmailer/phpmailer`
 
 ## Dependency
 `composer require vlucas/phpdotenv`
