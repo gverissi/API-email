@@ -30,5 +30,5 @@ if ($route === "email" && $req_method === "POST") {
 	$controller = new MainController();
     $controller->persistEmail($email);
     $controller->sendEmailToAdmin($email);
-	// $controller->sendEmailToUser($email);
+	$controller->sendEmailToUser($email);
 }
