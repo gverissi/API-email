@@ -4,9 +4,14 @@ use App\Controllers\MainController;
 
 require __DIR__ . '/vendor/autoload.php';
 
-// Load environnement data
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+if (file_exists(__DIR__ . '/.env')) {
+    $dotenv = \Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+}
+
+// // Load environnement data
+// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+// $dotenv->load();
 
 // // Test purposes
 // $email = "greg@gmail.com";
