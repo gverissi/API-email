@@ -16,6 +16,7 @@ $dotenv->load();
 header('Content-Type: application/json ; charset=utf-8');
 // header('Access-Control-Allow-Origin: http://127.0.0.1:5500');
 header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 
 $req_method = $_SERVER['REQUEST_METHOD'];
 $path = $_SERVER['PATH_INFO'];
