@@ -21,8 +21,11 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 $req_method = $_SERVER['REQUEST_METHOD'];
 $path = $_SERVER['PATH_INFO'];
 
-var_dump($req_method);
-var_dump($path);
+// var_dump($req_method);
+// var_dump($path);
+
+echo $req_method;
+echo $path;
 
 // if ($path === "/api/email/add" && $req_method === "POST") {
 // 	$data = json_decode(file_get_contents("php://input"), true);
