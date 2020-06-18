@@ -24,17 +24,18 @@ header('Access-Control-Allow-Origin: *');
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 
 $req_method = $_SERVER['REQUEST_METHOD'];
-$path = $_SERVER['PATH_INFO'];
+// $path = $_SERVER['PATH_INFO'];
+$path = $_GET["route"];
 
 // var_dump($req_method);
 // var_dump($path);
 
-echo $req_method;
-echo $_GET["route"];
+// echo $req_method;
+// echo $_GET["route"];
 
-// if ($path === "/api/email/add" && $req_method === "POST") {
-// 	$data = json_decode(file_get_contents("php://input"), true);
-// 	$email = (string) $data["email"];
-// 	$controller = new MainController();
-//     $controller->addEmail($email);
-// }
+if ($path === "email" && $req_method === "POST") {
+	$data = json_decode(file_get_contents("php://input"), true);
+	$email = (string) $data["email"];
+	$controller = new MainController();
+    $controller->addEmail($email);
+}
